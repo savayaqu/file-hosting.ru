@@ -23,10 +23,8 @@ Route::post('/registration', [UserController::class, 'signUp']);
 
 // Для авторизованных пользователей
 Route::middleware('auth:api')->group( function () {
-    Route::post('/upload', [FileController::class, 'store']);
     // Выход
     Route::get('/logout', [UserController::class, 'logout']);
-
     // Скачивание файла
     Route::get('/files/{file_id}', [FileController::class, 'download']);
     // Загрузка файлов

@@ -10,7 +10,8 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/authorization">Login</RouterLink>
         <RouterLink to="/registration">Sign Up</RouterLink>
         <RouterLink to="/logout">Logout</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/upload">Upload</RouterLink>
+        <RouterLink to="/download">Download</RouterLink>
       </nav>
     </div>
   </header>
