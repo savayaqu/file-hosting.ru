@@ -8,8 +8,8 @@ import {getCookie} from "@/CookieUtils";
     <div class="wrapper">
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/authorization">Login</RouterLink>
-        <RouterLink to="/registration">Sign Up</RouterLink>
+        <RouterLink v-if="!getCookie('token')" to="/authorization">Login</RouterLink>
+        <RouterLink v-if="!getCookie('token')" to="/registration">Sign Up</RouterLink>
         <RouterLink to="/logout">Logout</RouterLink>
         <RouterLink v-if="getCookie('token')" to="/files">Files</RouterLink>
       </nav>
