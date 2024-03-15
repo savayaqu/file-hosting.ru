@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
-    history: createWebHistory('/'), // изменено с import.meta.env.BASE_URL на '/'
+    history: createWebHistory('/'),
     routes: [
         {
             path: '/',
