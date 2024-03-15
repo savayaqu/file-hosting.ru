@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // Получаем содержимое файла index.html
+    $content = File::get(public_path('client/index.html'));
+
+    // Возвращаем содержимое файла как ответ
+    return $content;
 });
