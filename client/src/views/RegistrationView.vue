@@ -12,6 +12,7 @@
             <input type="password" id="password" v-model="password" required>
             <button type="submit">Зарегистрироваться</button>
         </form>
+        <router-link to="/authorization">Уже зареган? Войди!</router-link>
     </div>
 </template>
 

@@ -8,12 +8,12 @@
             <input type="password" id="password" v-model="password" required>
             <button type="submit">Войти</button>
         </form>
+        <router-link to="/registration">Не зареган?</router-link>
     </div>
 </template>
 
 <script>
 import axios from 'axios'
-
 export default {
     data() {
         return {
