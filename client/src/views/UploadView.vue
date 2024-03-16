@@ -1,13 +1,16 @@
 <template>
     <div>
         <h2>Загрузка файлов</h2>
-        <input type="file" ref="fileInput" multiple @change="handleFileUpload">
+        <div class="file-upload">
+            <input type="file" ref="fileInput" multiple @change="handleFileUpload">
+            <span>Выберите файлы</span>
+        </div>
     </div>
 </template>
 
 <script>
 import axios from 'axios';
-import {getCookie} from "@/CookieUtils";
+import { getCookie } from "@/CookieUtils";
 
 export default {
     methods: {
@@ -35,3 +38,42 @@ export default {
     }
 };
 </script>
+
+<style>
+.file-upload {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 16px;
+    overflow: hidden;
+    height: 50px;
+}
+
+.file-upload input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.file-upload span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 1;
+}
+</style>

@@ -10,7 +10,7 @@ import {getCookie} from "@/CookieUtils";
         <RouterLink to="/">Home</RouterLink>
         <RouterLink v-if="!getCookie('token')" to="/authorization">Login</RouterLink>
         <RouterLink v-if="!getCookie('token')" to="/registration">Sign Up</RouterLink>
-        <RouterLink to="/logout">Logout</RouterLink>
+        <RouterLink v-if="getCookie('token')" to="/logout" >Logout</RouterLink>
         <RouterLink v-if="getCookie('token')" to="/files">Files</RouterLink>
       </nav>
     </div>
